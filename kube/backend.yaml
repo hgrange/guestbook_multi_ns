@@ -1,6 +1,8 @@
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
+  annotations:
+    tier: backend
   name: redis-master
   namespace: team2
   labels:
@@ -32,6 +34,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    tier: backend
   name: redis-master
   namespace: team2
   labels:
@@ -51,6 +55,8 @@ spec:
 apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
 kind: Deployment
 metadata:
+  annotations:
+    tier: backend
   namespace: team2
   name: redis-slave
   labels:
@@ -93,6 +99,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  annotations:
+    tier: backend
   namespace: team2
   name: redis-slave
   labels:
