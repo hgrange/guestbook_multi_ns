@@ -1,4 +1,4 @@
-# guestook
+# guestbook
 
 A simple exemple of guest book. 
 
